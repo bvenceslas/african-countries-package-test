@@ -1,15 +1,12 @@
 const router = require('express').Router();
 const Person = require('../model/person.model');
 
-router.post('/upload', upload.single('profile'), async (req, res) => {
-    res.send(req.file);
-})
-
-router.route('/testAPI').get(async (req, res) => {
+// api test
+router.route('/test').get(async (req, res) => {
     res.json('PicaRest API works perfectly ...');
 });
 
-
+// save a person
 router.post('/persons', async (req, res) => {
     const { firstName, lastName, photo } = req.body;
 

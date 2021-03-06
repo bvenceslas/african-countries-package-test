@@ -15,5 +15,5 @@ app.use('/api', require('./routes/api'));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`PicaRest listening on ${port}`));
