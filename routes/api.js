@@ -45,6 +45,21 @@ router.get('/persons/:id', async (req, res) => {
     }
 });
 
+// put a particular person
+router.put('/persons/:id', upload.single('photo'), async (req, res) => {
+    try {
+        const newPersonData = {
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            photo: req.file.path
+        };       
+        const personUpdated = await Person.findByIdAndUpdate({_id: req.params.id}, newPersonData, {new: true});
+        return res.send(personUpdated);
+    } catch (error) {
+        return res.send({errorMessage: error})
+    }
+});
+
 
 module.exports = router;
 
