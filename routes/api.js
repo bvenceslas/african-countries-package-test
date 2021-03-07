@@ -25,5 +25,15 @@ router.post('/persons', upload.single('photo'), async (req, res) => {
     }
 });
 
+// get a person
+router.get('/persons', async (req, res) => {
+    try {        
+        const person = await Person.find();
+        return res.send(person);
+    } catch (error) {
+        return res.send({errorMessage: error})
+    }
+})
+
 module.exports = router;
 
