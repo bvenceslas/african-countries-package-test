@@ -1,0 +1,12 @@
+{
+  "name": "african-countries-package-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/bvenceslas/african-countries-package-test.git",
+  "author": "bvenceslas <bvenceslas@gmail.com>",
+  "license": "ISC"
+}
